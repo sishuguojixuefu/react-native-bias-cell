@@ -2,7 +2,7 @@ import React, {PureComponent} from 'react'
 import {View, Text} from 'react-native'
 import PropTypes from 'prop-types'
 
-export default class Bias extends PureComponent {
+export default class BiasCell extends PureComponent {
   static propTypes = {
     height: PropTypes.number,
     width: PropTypes.number,
