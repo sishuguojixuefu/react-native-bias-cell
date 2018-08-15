@@ -1,5 +1,3 @@
-// [Degrees to Radians Conversion](https://www.radianstodegrees.net/degrees-to-radians)
-// https://codepen.io/Chokcoco/pen/eBOpwO
 import React, {PureComponent} from 'react'
 import {View, Text} from 'react-native'
 import PropTypes from 'prop-types'
