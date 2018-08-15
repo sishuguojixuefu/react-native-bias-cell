@@ -1,5 +1,5 @@
 import React, {PureComponent} from 'react'
-import {View, Text} from 'react-native'
+import {View, Text, PixelRatio} from 'react-native'
 import PropTypes from 'prop-types'
 
 export default class BiasCell extends PureComponent {
@@ -28,7 +28,7 @@ export default class BiasCell extends PureComponent {
           left: 0,
           top: '50%',
           width: '100%',
-          height: 1,
+          height: 1/PixelRatio.get(),
           backgroundColor: biasColor,
           transform: reverse ? [{rotateZ: `${asin}rad`}, {scale: bias / width}] : [{rotateZ: `-${asin}rad`}, {scale: bias / width}],
         }}
