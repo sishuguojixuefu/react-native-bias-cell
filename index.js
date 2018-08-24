@@ -12,6 +12,7 @@ export default class BiasCell extends PureComponent {
     fontColor: PropTypes.string,
     reverse: PropTypes.bool,
     lineWidth: PropTypes.number,
+    textStyle: PropTypes.object,
   }
 
   static defaultProps = {
@@ -19,7 +20,7 @@ export default class BiasCell extends PureComponent {
     lineWidth: 1
   }
   render() {
-    const {height, width, leftText, rightText, biasColor, fontColor, reverse,lineWidth} = this.props
+    const {height, width, leftText, rightText, biasColor, fontColor, reverse,lineWidth,textStyle} = this.props
     const bias = Math.sqrt(Math.pow(height, 2) + Math.pow(width, 2))
     const asin = Math.asin(height / bias)
     return (
@@ -35,7 +36,7 @@ export default class BiasCell extends PureComponent {
           transform: reverse ? [{rotateZ: `${asin}rad`}, {scale: bias / width}] : [{rotateZ: `-${asin}rad`}, {scale: bias / width}],
         }}
         />
-        <Text style={{position: 'absolute', bottom: '20%', right: '10%', color: fontColor}}>{rightText}</Text>
+        <Text style={{position: 'absolute', bottom: '20%', right: '10%', color: fontColor,...textStyle}}>{rightText}</Text>
       </View>
     )
   }
