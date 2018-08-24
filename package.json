@@ -1,6 +1,6 @@
 {
   "name": "react-native-bias-cell",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "一个带有斜线的react native单元格组件",
   "main": "index.js",
   "scripts": {

@@ -25,7 +25,7 @@ export default class BiasCell extends PureComponent {
     const asin = Math.asin(height / bias)
     return (
       <View style={{height, width}}>
-        <Text style={{position: 'absolute', top: '20%', left: '10%', color: fontColor}}>{leftText}</Text>
+        <Text style={{position: 'absolute', top: '20%', left: '10%', color: fontColor,...textStyle}}>{leftText}</Text>
         <View style={{
           position: 'absolute',
           left: 0,
